@@ -32,7 +32,7 @@ const Navbar = () => {
   }, [animateMenu, menuOpen]);
 
   return (
-    <header className="flex items-center mx-auto mt-[25px] border border-gray-500 w-[1870px] h-[57px]">
+    <header className="flex items-center mx-auto mt-[25px] border border-gray-500 w-full h-[57px]">
       <div className="flex items-center justify-between w-full">
         {/* 로고 */}
         <div className="flex-none ml-[25px]">
@@ -68,19 +68,19 @@ const Navbar = () => {
                 href="#"
                 className="text-black font-semibold whitespace-nowrap"
               >
-                For Me
+                for me
               </a>
               <a
                 href="#"
                 className="text-black font-semibold whitespace-nowrap"
               >
-                Movies
+                movies
               </a>
               <a
                 href="#"
                 className="text-black font-semibold whitespace-nowrap"
               >
-                Login
+                login
               </a>
             </div>
           )}

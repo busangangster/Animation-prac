@@ -1,6 +1,8 @@
 // App.jsx
-import React from "react";
+// import React from "react";
 import Navbar from "./Navbar";
+import CircleCarousel from "./CircleCarousel";
+import LandingPage from "./LandingPage";
 
 function App() {
   return (
@@ -11,9 +13,9 @@ function App() {
       </header>
 
       {/* 메인 콘텐츠 영역 */}
-      <main className="flex-grow container mx-auto px-4 py-8">
-        <h1 className="text-center text-3xl font-bold">메인 콘텐츠</h1>
-        {/* 메인 콘텐츠를 여기에 추가 */}
+      <main className="w-hull h-screen">
+        {/* <CircleCarousel /> */}
+        <LandingPage />
       </main>
     </div>
   );
