@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const MovieDetail: React.FC = () => {
   const actors = [
@@ -22,6 +27,21 @@ const MovieDetail: React.FC = () => {
     "Danny Ramirez",
   ];
 
+  const movieImg = [
+    "https://via.placeholder.com/200x300?text=Movie+1",
+    "https://via.placeholder.com/200x300?text=Movie+2",
+    "https://via.placeholder.com/200x300?text=Movie+1",
+    "https://via.placeholder.com/200x300?text=Movie+2",
+    "https://via.placeholder.com/200x300?text=Movie+1",
+    "https://via.placeholder.com/200x300?text=Movie+2",
+    "https://via.placeholder.com/200x300?text=Movie+1",
+    "https://via.placeholder.com/200x300?text=Movie+2",
+    "https://via.placeholder.com/200x300?text=Movie+1",
+    "https://via.placeholder.com/200x300?text=Movie+2",
+    "https://via.placeholder.com/200x300?text=Movie+1",
+    "https://via.placeholder.com/200x300?text=Movie+2",
+  ];
+
   const [isFilled, setIsFilled] = useState(false);
 
   const toggleHeart = () => {
@@ -30,22 +50,20 @@ const MovieDetail: React.FC = () => {
 
   return (
     <div className="flex flex-col bg-black h-screen overflow-y-auto">
-      <div className="relative h-[650px] overflow-hidden">
+      <div className="relative h-auto">
         {/* 배경 이미지 영역 */}
         <div
-          className="absolute inset-0 h-full w-full bg-cover bg-center"
+          className="absolute inset-0 h-[650px] w-full bg-cover bg-center"
           style={{ backgroundImage: "url('src/assets/topgun-bg.png')" }}
         >
           <div className="absolute inset-0 bg-black opacity-70"></div>
         </div>
-
         {/* Header with Navbar */}
         <header className="sticky top-0 bg-transparent z-10">
           <Navbar />
         </header>
-
         {/* Top section */}
-        <div className="absolute flex items-end text-white p-3 w-[1100px] h-[480px] bg-transparent ml-[50px] mt-[70px] overflow-hidden">
+        <div className="relative flex items-end text-white p-3 w-[1100px] h-[480px] bg-transparent ml-[50px] mt-[70px] overflow-hidden">
           {/* Left Section: Movie Poster and Details */}
           <div className="flex flex-col lg:flex-row">
             <img
@@ -110,21 +128,23 @@ const MovieDetail: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Reviews Section */}
-      <div className="flex h-[300px] items-start">
+      <div className="flex">
         {/* 리뷰 섹션 */}
-        <div className="p-4 bg-white text-black rounded-md m-4 w-[1000px] h-full">
-          <h3 className="text-2xl font-bold">Reviews</h3>
-          <div className="mt-4 space-y-4">
+        <div className="p-4 bg-black text-black rounded-md w-[800px] h-[400px] mt-8 ml-[150px]">
+          <h3 className="text-2xl font-bold text-white">Reviews</h3>
+          <div className="mt-4 space-y-4 text-white text-[14px]">
             <div className="flex items-start space-x-2">
               <div className="bg-gray-800 w-8 h-8 flex items-center justify-center rounded-full">
                 <span className="text-white font-bold">B</span>
               </div>
-              <p className="flex-1">
+              <p className="flex-1 ">
                 <strong>busangangstar</strong> • 5.0 ⭐️
                 <br />
-                탑건(1986년)의 36년만의 후속작. 정말 멋있었다...
+                탑건1(1986년)의 36년만의 나온 속편. 매우 만족 스러웠고 매우
+                재밌었다 무조건 특별관에서 봐야되는 영화 2022년 개봉작
+                영화중에서 범죄도시2 이후 2번째로 엄청 좋았던 영화 톰 크루즈
+                미모는 여전히 잘생겼다 1편을 보고 가야되는 질문에서 답을 하자면
+                1편 보고 가는게 더 좋다 감동도 2배 더 느낄 수 있음
               </p>
             </div>
             {/* 다른 리뷰 추가 */}
@@ -135,19 +155,36 @@ const MovieDetail: React.FC = () => {
               <p className="flex-1">
                 <strong>jaechan</strong> • 4.5 ⭐️
                 <br />
-                영화관에서 탑건 보고 집에 가려고 할 때 듣는 느낌...
+                영화관에서 영화관에서 탑건 보고 집에 가려고 차 핸들 잡는데 F-18
+                탄것도 아니면서 쓸데없이 비장해짐 보고 집에 가려고 할 때 듣는
+                느낌...
+              </p>
+            </div>
+            <div className="flex items-start space-x-2">
+              <div className="bg-gray-800 w-8 h-8 flex items-center justify-center rounded-full">
+                <span className="text-white font-bold">B</span>
+              </div>
+              <p className="flex-1 ">
+                <strong>busangangstar</strong> • 5.0 ⭐️
+                <br />
+                탑건1(1986년)의 36년만의 나온 속편. 매우 만족 스러웠고 매우
+                재밌었다 무조건 특별관에서 봐야되는 영화 2022년 개봉작
+                영화중에서 범죄도시2 이후 2번째로 엄청 좋았던 영화 톰 크루즈
+                미모는 여전히 잘생겼다 1편을 보고 가야되는 질문에서 답을 하자면
+                1편 보고 가는게 더 좋다 감동도 2배 더 느낄 수 있음
               </p>
             </div>
           </div>
         </div>
 
         {/* 트레일러 섹션 */}
-        <div className="w-[300px] bg-black text-white flex justify-center items-center m-4 p-4 h-full">
-          <div className="relative w-full max-w-4xl">
+        <div className="w-[700px] bg-black text-white flex justify-center items-center m-4 p-4 h-[400px] ml-[50px]">
+          {/* 부모 요소에 높이 설정 */}
+          <div className="relative w-full max-w-4xl h-full">
             <img
               src="/src/assets/topgun-bg.png"
               alt="Trailer"
-              className="w-full h-auto rounded-lg shadow-md"
+              className="w-full h-full object-cover rounded-lg shadow-md"
             />
             <button className="absolute inset-0 flex items-center justify-center text-white">
               <svg className="w-12 h-12" />
@@ -157,6 +194,29 @@ const MovieDetail: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="h-[300px] w-[1700px] flex-shrink-0 mb-[50px] ml-[50px]">
+        <Swiper
+          slidesPerView={8}
+          // spaceBetween={}
+          // slidesOffsetBefore={50} // 시작할 때 한 칸 걸쳐 보이도록 설정
+          navigation
+          pagination={{ clickable: true }}
+          // style={{ padding: "0 0" }} // 슬라이더 여백 조정
+        >
+          {movieImg.map((img, index) => (
+            <SwiperSlide
+              key={index}
+              className="flex justify-center items-center"
+            >
+              <img
+                src={img}
+                alt={`Movie ${index + 1}`}
+                className="rounded-lg shadow-md"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );
