@@ -11,7 +11,7 @@ import Favorite from "./Favorite";
 import Verification from "./Verification";
 import UserInfoEdit from "./UserInfoEdit";
 import MovieDetail from "./MovieDetail";
-import TurnPage from "./TurnPage";
+import Survey from "./Survey";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route path="/landing" element={<LandingPage />} />
         <Route path="/home" element={<Home />} />
         <Route path="/moviedetail" element={<MovieDetail />} />
-        <Route path="/turnpage" element={<TurnPage />} />
+        <Route path="/survey" element={<Survey />} />
 
         <Route path="/mypage" element={<MyPage />}>
           <Route path="userinfo" element={<UserInfo />} />
