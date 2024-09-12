@@ -1,23 +1,35 @@
-// App.jsx
 // import React from "react";
+
 import Navbar from "./Navbar";
 import CircleCarousel from "./CircleCarousel";
 import LandingPage from "./LandingPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Home";
+import MyPage from "./Mypage";
+import UserInfo from "./UserInfo";
+import Favorite from "./Favorite";
+import Verification from "./Verification";
+import UserInfoEdit from "./UserInfoEdit";
+import MovieDetail from "./MovieDetail";
+import TurnPage from "./TurnPage";
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* 상단 네브바 */}
-      <header className="sticky top-0 bg-white z-10">
-        <Navbar />
-      </header>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/landing" element={<LandingPage />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/moviedetail" element={<MovieDetail />} />
+        <Route path="/turnpage" element={<TurnPage />} />
 
-      {/* 메인 콘텐츠 영역 */}
-      <main className="w-hull h-screen">
-        {/* <CircleCarousel /> */}
-        <LandingPage />
-      </main>
-    </div>
+        <Route path="/mypage" element={<MyPage />}>
+          <Route path="userinfo" element={<UserInfo />} />
+          <Route path="favorite" element={<Favorite />} />
+          <Route path="verification" element={<Verification />} />
+          <Route path="userinfoedit" element={<UserInfoEdit />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -14,16 +14,11 @@ const CircleCarousel: React.FC = () => {
   const appRef = useRef<Application | null>(null);
 
   const imageUrls = [
-    "https://newsimg.hankookilbo.com/cms/articlerelease/2020/06/11/202006111344727172_1.jpg",
-    "https://images.justwatch.com/poster/304962775/s718/about-time.jpg",
-    "https://img.vogue.co.kr/vogue/2023/02/style_63f834d1a9c4b-649x930.jpeg",
-    "https://upload.wikimedia.org/wikipedia/ko/b/b9/%EB%B2%94%EC%A3%84%EB%8F%84%EC%8B%9C_2_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg",
-    "https://cdn.ijnews.net/news/photo/202206/20667_20749_4216.jpg",
-    "https://img5.yna.co.kr/etc/inner/KR/2019/08/14/AKR20190814059800005_01_i_P2.jpg",
-    "https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/8Iwt/image/lPwJTg2Y0uWhX5QDVgBwo80JI8M.jpg",
-    "https://www.book21.com/data/FILE141817258867.jpg",
-    "https://muko.kr/files/attach/images/2022/11/06/0ecb9e587e301da620a30c1ab40e4107.jpg",
-    "https://upload.wikimedia.org/wikipedia/ko/e/ea/%EA%B4%B4%EB%AC%BC_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg",
+    "/src/assets/avengers1.jpg",
+    "/src/assets/fastand.jpg",
+    "/src/assets/firstandF.jpg",
+    "/src/assets/lordof.jpg",
+    "/src/assets/monster.jpg",
   ];
 
   useEffect(() => {
@@ -33,7 +28,7 @@ const CircleCarousel: React.FC = () => {
       await app.init({
         autoStart: false,
         resizeTo: window,
-        backgroundColor: 0x1e1e1e,
+        backgroundColor: 0x000000,
         sharedTicker: true,
         autoDensity: true,
         resolution: window.devicePixelRatio || 1,
