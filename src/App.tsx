@@ -12,6 +12,7 @@ import Verification from "./Verification";
 import UserInfoEdit from "./UserInfoEdit";
 import MovieDetail from "./MovieDetail";
 import Survey from "./Survey";
+import Category from "./Category";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/moviedetail" element={<MovieDetail />} />
         <Route path="/survey" element={<Survey />} />
+        <Route path="/category" element={<Category />} />
 
         <Route path="/mypage" element={<MyPage />}>
           <Route path="userinfo" element={<UserInfo />} />

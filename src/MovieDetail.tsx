@@ -28,17 +28,17 @@ const MovieDetail: React.FC = () => {
   ];
 
   const movieImg = [
-    "https://via.placeholder.com/200x300?text=Movie+1",
     "https://via.placeholder.com/200x300?text=Movie+2",
-    "https://via.placeholder.com/200x300?text=Movie+1",
     "https://via.placeholder.com/200x300?text=Movie+2",
-    "https://via.placeholder.com/200x300?text=Movie+1",
     "https://via.placeholder.com/200x300?text=Movie+2",
-    "https://via.placeholder.com/200x300?text=Movie+1",
     "https://via.placeholder.com/200x300?text=Movie+2",
-    "https://via.placeholder.com/200x300?text=Movie+1",
     "https://via.placeholder.com/200x300?text=Movie+2",
-    "https://via.placeholder.com/200x300?text=Movie+1",
+    "https://via.placeholder.com/200x300?text=Movie+2",
+    "https://via.placeholder.com/200x300?text=Movie+2",
+    "https://via.placeholder.com/200x300?text=Movie+2",
+    "https://via.placeholder.com/200x300?text=Movie+2",
+    "https://via.placeholder.com/200x300?text=Movie+2",
+    "https://via.placeholder.com/200x300?text=Movie+2",
     "https://via.placeholder.com/200x300?text=Movie+2",
   ];
 
@@ -195,7 +195,7 @@ const MovieDetail: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="h-[300px] w-[1700px] flex-shrink-0 mb-[50px] ml-[50px]">
+      <div className="h-[300px] w-[1700px] flex-shrink-0 mb-[50px] ml-[100px]">
         <Swiper
           slidesPerView={8}
           // spaceBetween={}
