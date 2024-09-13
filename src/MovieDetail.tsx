@@ -3,7 +3,6 @@ import Navbar from "./Navbar";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const MovieDetail: React.FC = () => {
@@ -130,8 +129,11 @@ const MovieDetail: React.FC = () => {
       </div>
       <div className="flex">
         {/* 리뷰 섹션 */}
-        <div className="p-4 bg-black text-black rounded-md w-[800px] h-[400px] mt-8 ml-[150px]">
-          <h3 className="text-2xl font-bold text-white">Reviews</h3>
+        <div className="p-4 bg-black text-black rounded-md w-[800px] h-[400px] mt-8 ml-[150px] border-b border-white">
+          <div className="flex w-[800px] justify-between">
+            <h3 className="text-2xl font-bold text-white">Reviews</h3>
+            <div className="text-white flex ml-auto items-end">more</div>
+          </div>
           <div className="mt-4 space-y-4 text-white text-[14px]">
             <div className="flex items-start space-x-2">
               <div className="bg-gray-800 w-8 h-8 flex items-center justify-center rounded-full">
@@ -178,15 +180,17 @@ const MovieDetail: React.FC = () => {
         </div>
 
         {/* 트레일러 섹션 */}
-        <div className="w-[700px] bg-black text-white flex justify-center items-center m-4 p-4 h-[400px] ml-[50px]">
+        <div className="w-[700px] bg-black text-white flex justify-center items-center m-4 p-4 h-[400px] ml-[50px] mt-[50px]">
           {/* 부모 요소에 높이 설정 */}
           <div className="relative w-full max-w-4xl h-full">
-            <img
-              src="/src/assets/topgun-bg.png"
-              alt="Trailer"
-              className="w-full h-full object-cover rounded-lg shadow-md"
-            />
-            <button className="absolute inset-0 flex items-center justify-center text-white">
+            <iframe
+              src="https://www.youtube.com/embed/qSqVVswa420"
+              title="YouTube video player"
+              className="w-full h-full rounded-lg shadow-md"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+            <button className="absolute inset-0 flex items-center justify-center text-white pointer-events-none">
               <svg className="w-12 h-12" />
             </button>
             <div className="absolute top-0 left-0 bg-black bg-opacity-50 text-white px-3 py-1 rounded-br-lg">
@@ -195,7 +199,10 @@ const MovieDetail: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="h-[300px] w-[1700px] flex-shrink-0 mb-[50px] ml-[100px]">
+      <div className="h-[300px] w-[1700px] flex-shrink-0 mb-[50px] ml-[80px] mt-[20px]">
+        <h2 className="text-[24px] text-white flex mb-[20px]">
+          탑건: 매버릭과 유사한 장르 작품들
+        </h2>
         <Swiper
           slidesPerView={8}
           // spaceBetween={}
